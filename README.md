@@ -6,11 +6,31 @@ This project demonstrates the design, implementation, configuration and testing 
 
 The lab was built using two physical computers to demonstrate centralized identity management, network services, Group Policy, file sharing, server administration and client connectivity.
 
-## 🏗️ Network Architecture
 
 The following diagram represents the actual ABC Technologies lab environment.
 
-![ABC Technologies Architecture](architecture/architecture-diagram.md)
+```mermaid
+flowchart TB
+    R["Network Router<br/>192.168.0.1"]
+    S["PC01 - Windows Server 2022<br/>192.168.0.200<br/>Domain: lab.local"]
+    C["AJAY-ADMIN - Windows 10 Enterprise<br/>192.168.0.106"]
+
+    subgraph Roles["Installed roles on PC01"]
+        AD["Active Directory"]
+        DNS["DNS"]
+        DHCP["DHCP"]
+        FS["File Server / FSRM"]
+        IIS["IIS"]
+        HV["Hyper-V"]
+        WDS["WDS"]
+    end
+
+    R --> S
+    R --> C
+    S --> Roles
+    C <-->|"Domain / DNS / GPO / SMB"| S
+```
+
 
 ## Lab Environment
 
