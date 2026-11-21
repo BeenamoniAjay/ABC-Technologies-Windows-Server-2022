@@ -1,0 +1,19 @@
+# ABC Technologies
+# Workstation Group Policy Verification
+# Domain: lab.local
+
+Import-Module GroupPolicy
+
+$GPOName = "ABC-Workstation-Security-Baseline"
+
+Write-Host "Checking workstation security GPO..." -ForegroundColor Cyan
+
+Get-GPO -Name $GPOName |
+    Format-List DisplayName, Id, GpoStatus
+
+Write-Host "Checking GPO link..." -ForegroundColor Cyan
+
+Get-GPInheritance -Target `
+    "OU=ABC-Workstations,OU=ABC-Technologies,DC=lab,DC=local"
+
+Write-Host "GPO verification completed." -ForegroundColor Green

@@ -1,0 +1,35 @@
+# ABC Technologies
+# File Server Verification
+
+Write-Host "Checking ABC Company Share..." -ForegroundColor Cyan
+
+Get-SmbShare -Name "ABCCompany$"
+
+Write-Host "Checking department folders..." -ForegroundColor Cyan
+
+Get-ChildItem "D:\ABCCompanyData" -Directory
+
+Write-Host "Checking NTFS permissions..." -ForegroundColor Cyan
+
+$Folders = @(
+    "HR",
+    "Finance",
+    "IT",
+    "Sales",
+    "Management",
+    "Public"
+)
+
+foreach ($Folder in $Folders) {
+
+    $Path = "D:\ABCCompanyData\$Folder"
+
+    Write-Host "`n--- $Folder ---"
+
+    if (Test-Path $Path) {
+        (Get-Acl $Path).Access |
+            Format-Table IdentityReference, FileSystemRights, AccessControlType
+    }
+}
+
+Write-Host "File Server verification completed." -ForegroundColor Green
