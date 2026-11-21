@@ -6,6 +6,12 @@ This project demonstrates the design, implementation, configuration and testing 
 
 The lab was built using two physical computers to demonstrate centralized identity management, network services, Group Policy, file sharing, server administration and client connectivity.
 
+## 🏗️ Network Architecture
+
+The following diagram represents the actual ABC Technologies lab environment.
+
+![ABC Technologies Architecture](architecture/architecture-diagram.md)
+
 ## Lab Environment
 
 | Component | Configuration |
