@@ -192,6 +192,28 @@ The lab includes validation of:
 
 See the project documentation for detailed results, limitations and future improvements.
 
+
+## 📸 Project Screenshots
+
+The following screenshots demonstrate the implementation and testing of the Windows Server 2022 lab.
+
+### Active Directory and Group Policy
+![Active Directory OU Structure](screenshots/03-active-directory-ou-structure.png)
+
+![Group Policy Management](screenshots/08-group-policy-management.png)
+
+### DNS and DHCP
+![DNS Forward Lookup Zone](screenshots/11-dns-forward-lookup-zone.png)
+
+![DHCP Scope Configuration](screenshots/13-dhcp-scope-configuration.png)
+
+### File Server and IIS
+![File Server Shares](screenshots/15-file-server-shares.png)
+
+![IIS Website Configuration](screenshots/18-iis-website-configuration.png)
+
+See the [complete screenshot collection](screenshots/) for additional evidence.
+
 ## Disclaimer
 
 This is an educational homelab project. It is not a production deployment. Configuration and testing claims are limited to the features actually implemented and verified.
