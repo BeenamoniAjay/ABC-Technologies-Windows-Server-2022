@@ -145,6 +145,27 @@ This project provided practical experience in:
 - PowerShell administration
 - Enterprise infrastructure documentation
 
+## 📚 Project Resources
+
+Explore the complete implementation and supporting evidence:
+
+- 📄 [Complete Project Documentation](documentation/ABC-Technologies-Project-Documentation.docx)
+- 🖼️ [Project Screenshots](screenshots/)
+- 💻 [PowerShell Scripts](scripts/)
+- 🏗️ [Architecture Files](architecture/)
+
+## 🧪 Project Validation
+
+The lab includes validation of:
+- Active Directory domain connectivity
+- DNS resolution and domain controller discovery
+- Group Policy application
+- Department-based file-share access
+- Remote Desktop connectivity
+- IIS configuration troubleshooting
+
+See the project documentation for detailed results, limitations and future improvements.
+
 ## Disclaimer
 
 This is an educational homelab project. It is not a production deployment. Configuration and testing claims are limited to the features actually implemented and verified.
