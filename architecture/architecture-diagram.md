@@ -1,3 +1,4 @@
+```mermaid 
 flowchart TB
     R["Network Router<br/>192.168.0.1"]
 
@@ -19,3 +20,4 @@ flowchart TB
     R --> C
     S --- Roles
     C <-->|Domain / DNS / GPO / SMB| S
+```
